@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="programmer" class="com.sin.service.Programmer" />
+	<bean id="designer" class="com.sin.service.Designer" />
+	<bean id="develope" class="com.sin.service.Develop" p:emp-ref="programmer" />
+	
+	<!-- <bean id="develope" class="com.sin.service.Develop" >
+		<property name="emp">
+			<ref bean="programmer" />
+		</property>
+	</bean>
+	
+	<bean id="develope" class="com.sin.service.Develop" >
+		<property name="emp" ref="programmer" />
+	</bean> -->
+	
+</beans>
