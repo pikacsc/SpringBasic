@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+	<bean id="programmer" class="com.cin.service.Programmer" />
+	<bean id="designer" class="com.cin.service.Designer" />
+	<bean id="develop" class="com.cin.service.Develop" c:emp-ref="programmer" />
+<!-- 		<constructor-arg ref="programmer" />
+	 </bean>-->
+</beans>
