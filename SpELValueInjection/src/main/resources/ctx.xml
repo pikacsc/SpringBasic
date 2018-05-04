@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean name="onj" class="com.spel.Onj" />
+	<bean name="sample" class="com.spel.SpellInjectionExam" >
+		<property name="name">
+		<!-- Onj클래스에는 Getter가 만들어져 있어야한다 -->
+			<value>#{onj.name}</value>
+		</property>
+		<property name="age">
+			<value>#{onj.age}</value>
+		</property>
+	</bean>
+</beans>
